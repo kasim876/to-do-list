@@ -1,0 +1,20 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.root {
+  border: 1px solid $orange;
+  border-radius: rem(4);
+  padding: 0.5em 1em;
+  width: 100%;
+  height: rem(50);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 120%;
+  color: $light-beige;
+  background-color: #242320;
+
+  &:focus {
+    outline: none;
+    color: $beige;
+  }
+}
