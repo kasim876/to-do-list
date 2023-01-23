@@ -1,0 +1,19 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.root {
+  border: 1px solid $gold;
+  border-radius: rem(4);
+  width: 100%;
+  height: rem(50);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 120%;
+  color: $orange;
+  background-color: rgba(255 255 255 / 0%);
+  transition: border-color 0.5s ease;
+
+  @include hover {
+    border-color: $orange;
+  }
+}
