@@ -1,0 +1,16 @@
+@import "./mixins";
+
+// values
+
+$content-width: #{rem(1110)};
+$container-offset: #{rem(15)};
+$section-offset: #{rem(65)};
+
+// fonts
+
+$font-family: 'sans-serif';
+
+// colors
+
+$black: #000;
+$white: #fff;
