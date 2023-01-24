@@ -1,0 +1,29 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  border: 1px solid $orange;
+  border-radius: rem(4);
+  padding: 1rem;
+  width: 100%;
+}
+
+.name {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  font-size: rem(24);
+  line-height: 120%;
+}
+
+.descr {
+  font-size: rem(16);
+  line-height: 120%;
+}
+
+.button {
+  max-width: rem(200);
+}
