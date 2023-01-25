@@ -1,0 +1,39 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.root {
+  margin: 3rem 0;
+}
+
+.title {
+  font-size: rem(40);
+  line-height: 120%;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(24);
+  line-height: 120%;
+  color: $white;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    border-radius: rem(40);
+    width: rem(64);
+    height: rem(3);
+    background-color: $orange;
+  }
+
+  &::before {
+    margin-bottom: rem(12);
+  }
+
+  &::after {
+    margin-top: rem(12);
+  }
+}

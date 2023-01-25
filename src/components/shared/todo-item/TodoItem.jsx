@@ -3,6 +3,7 @@ import React from 'react';
 import Button from '@ui/button/Button';
 
 import styles from './TodoItem.module.scss';
+import './TodoItemAnimate.scss';
 
 const TodoItem = ({todo, remove}) => {
   return (
