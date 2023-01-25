@@ -1,0 +1,14 @@
+@import "src/styles/mixins";
+@import "src/styles/vars";
+
+.root {
+  margin: 3rem 0;
+}
+
+.input {
+  margin-bottom: 1rem;
+}
+
+.button {
+  max-width: rem(200);
+}
