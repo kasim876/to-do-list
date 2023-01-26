@@ -1,11 +1,11 @@
 import React from 'react';
 
+import {ReactComponent as BinIcon} from '@assets/images/svg/bin.svg';
+
 import Checkbox from '@ui/checkbox/Checkbox';
 import Button from '@ui/button/Button';
 
 import styles from './TodoItem.module.scss';
-
-import './TodoItemAnimate.scss';
 
 const TodoItem = ({todo, complete, remove}) => {
   return (
@@ -15,14 +15,14 @@ const TodoItem = ({todo, complete, remove}) => {
         isCompleted={todo.isCompleted}
         onClick={() => complete(todo)}
       />
-      <div>
-        <span
-          className={`${styles.title}${todo.isCompleted ? ` ${styles['name-cross']}` : ''}`}
-        >
-          {todo.title}
-        </span>
-      </div>
-      <Button className={styles.button} onClick={() => remove(todo)}>Удалить</Button>
+      <span
+        className={`${styles.title}${todo.isCompleted ? ` ${styles.titleCross}` : ''}`}
+      >
+        {todo.title}
+      </span>
+      <Button className={styles.button} onClick={() => remove(todo)}>
+        <BinIcon className={styles.icon}/>
+      </Button>
     </div>
   );
 };

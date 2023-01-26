@@ -16,6 +16,7 @@
 }
 
 .title {
+  margin-right: 1rem;
   font-weight: 500;
   font-size: rem(24);
   line-height: 120%;
@@ -25,11 +26,22 @@
   }
 }
 
-.name-cross {
+.titleCross {
   text-decoration: line-through;
 }
 
 .button {
   margin-left: auto;
-  max-width: rem(200);
+  max-width: rem(50);
+
+  @include hover {
+    .icon {
+      fill: $red;
+    }
+  }
+}
+
+.icon {
+  fill: $white;
+  transition: 0.5s ease;
 }
