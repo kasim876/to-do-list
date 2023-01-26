@@ -11,7 +11,7 @@ const TodoForm = ({create}) => {
   const addNewTodo = (e) => {
     e.preventDefault();
 
-    if (todo.title && todo.descr) {
+    if (todo.title) {
       const newTodo = {
         id: Date.now(),
         ...todo,
@@ -21,7 +21,7 @@ const TodoForm = ({create}) => {
 
       setTodo({title: '', descr: ''});
     } else {
-      alert('Введите название и описание!');
+      alert('Введите название задачи!');
     }
   };
 
@@ -29,14 +29,14 @@ const TodoForm = ({create}) => {
     <form className={styles.root}>
       <Input
         className={styles.input}
-        placeholder="Title..."
+        placeholder="Название задачи"
         value={todo.title}
         type="text"
         onChange={e => setTodo({...todo, title: e.target.value})}
       />
       <Input
         className={styles.input}
-        placeholder="About..."
+        placeholder="Описание"
         value={todo.descr}
         type="text"
         onChange={e => setTodo({...todo, descr: e.target.value})}
