@@ -13,10 +13,13 @@
 }
 
 .name {
-  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: rem(24);
   line-height: 120%;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
 }
 
 .descr {

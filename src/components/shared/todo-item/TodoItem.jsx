@@ -10,7 +10,13 @@ const TodoItem = ({todo, remove}) => {
     <div className={styles.root}>
       <div>
         <h3 className={styles.name}>{todo.title}</h3>
-        <p className={styles.descr}>{todo.descr}</p>
+        {
+          todo.descr
+            ?
+            <p className={styles.descr}>{todo.descr}</p>
+            :
+            ''
+        }
       </div>
       <Button className={styles.button} onClick={() => remove(todo)}>Удалить</Button>
     </div>
