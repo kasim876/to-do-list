@@ -16,14 +16,11 @@ const TodoItem = ({todo, complete, remove}) => {
         onClick={() => complete(todo)}
       />
       <div>
-        <h3 className={`${styles.name}${todo.isCompleted ? ` ${styles['name-cross']}` : ''}`}>{todo.title}</h3>
-        {
-          todo.descr
-            ?
-            <p className={styles.descr}>{todo.descr}</p>
-            :
-            ''
-        }
+        <span
+          className={`${styles.title}${todo.isCompleted ? ` ${styles['name-cross']}` : ''}`}
+        >
+          {todo.title}
+        </span>
       </div>
       <Button className={styles.button} onClick={() => remove(todo)}>Удалить</Button>
     </div>
