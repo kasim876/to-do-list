@@ -30,17 +30,10 @@ const TodoForm = ({create}) => {
     <form className={styles.root}>
       <Input
         className={styles.input}
-        placeholder="Название задачи"
+        placeholder="Добавьте задачу"
         value={todo.title}
         type="text"
         onChange={e => setTodo({...todo, title: e.target.value})}
-      />
-      <Input
-        className={styles.input}
-        placeholder="Описание"
-        value={todo.descr}
-        type="text"
-        onChange={e => setTodo({...todo, descr: e.target.value})}
       />
       <Button className={styles.button} onClick={addNewTodo}>Добавить</Button>
     </form>
