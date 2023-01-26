@@ -6,23 +6,23 @@ import Button from '@ui/button/Button';
 import styles from './TodoForm.module.scss';
 
 const TodoForm = ({create}) => {
-  const [todo, setTodo] = useState({title: '', descr: ''});
+  const [title, setTitle] = useState('');
 
   const addNewTodo = (e) => {
     e.preventDefault();
 
-    if (todo.title) {
+    if (title) {
       const newTodo = {
         id: Date.now(),
+        title,
         isCompleted: false,
-        ...todo,
       };
 
       create(newTodo);
 
-      setTodo({title: '', descr: ''});
+      setTitle('');
     } else {
-      alert('Введите название задачи!');
+      alert('Напишите задачу');
     }
   };
 
@@ -31,9 +31,9 @@ const TodoForm = ({create}) => {
       <Input
         className={styles.input}
         placeholder="Добавьте задачу"
-        value={todo.title}
+        value={title}
         type="text"
-        onChange={e => setTodo({...todo, title: e.target.value})}
+        onChange={e => setTitle(e.target.value)}
       />
       <Button className={styles.button} onClick={addNewTodo}>Добавить</Button>
     </form>
