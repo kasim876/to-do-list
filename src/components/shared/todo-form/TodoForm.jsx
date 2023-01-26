@@ -14,6 +14,7 @@ const TodoForm = ({create}) => {
     if (todo.title) {
       const newTodo = {
         id: Date.now(),
+        isCompleted: false,
         ...todo,
       };
 

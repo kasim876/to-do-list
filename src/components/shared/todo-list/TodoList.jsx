@@ -5,7 +5,7 @@ import TodoItem from '../todo-item/TodoItem';
 
 import styles from './TodoList.module.scss';
 
-const TodoList = ({todos, title, remove}) => {
+const TodoList = ({todos, title, complete, remove}) => {
 
   return (
     <div>
@@ -23,7 +23,7 @@ const TodoList = ({todos, title, remove}) => {
                   timeout={500}
                   classNames="todo"
                 >
-                  <TodoItem remove={remove} todo={todo}/>
+                  <TodoItem todo={todo} complete={complete} remove={remove}/>
                 </CSSTransition>
               ))
             }

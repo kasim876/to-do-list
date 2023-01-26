@@ -4,12 +4,15 @@
 .root {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 0.5rem 0;
   border: 1px solid $orange;
   border-radius: rem(4);
   padding: 1rem;
   width: 100%;
+}
+
+.checkbox {
+  margin-right: 1rem;
 }
 
 .name {
@@ -22,11 +25,16 @@
   }
 }
 
+.name-cross {
+  text-decoration: line-through;
+}
+
 .descr {
   font-size: rem(16);
   line-height: 120%;
 }
 
 .button {
+  margin-left: auto;
   max-width: rem(200);
 }
