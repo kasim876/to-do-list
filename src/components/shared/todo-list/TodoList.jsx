@@ -4,13 +4,12 @@ import TodoItem from '../todo-item/TodoItem';
 
 import styles from './TodoList.module.scss';
 
-const TodoList = ({todos, title, complete, remove}) => {
+const TodoList = ({todos, complete, remove}) => {
   const completedTodos = todos.filter(t => t.isCompleted === true);
   const unCompletedTodos = todos.filter(t => t.isCompleted === false);
 
   return (
     <div>
-      <h1 align="center" className={styles.title}>{title}</h1>
       <div className={styles.root}>
         {
           unCompletedTodos.length === 0
