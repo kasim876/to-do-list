@@ -2,16 +2,7 @@
 @import "src/styles/vars";
 
 .root {
-  margin: 3rem 0;
-}
-
-.title {
-  font-size: rem(40);
-  line-height: 120%;
-}
-
-.subtitle {
-  margin: rem(20) 0;
+  padding: rem(30) 0;
 }
 
 .placeholder {
@@ -19,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: rem(30);
   font-size: rem(24);
   line-height: 120%;
   color: $white;
@@ -40,4 +32,8 @@
   &::after {
     margin-top: rem(12);
   }
+}
+
+.subtitle {
+  margin-bottom: rem(20);
 }
