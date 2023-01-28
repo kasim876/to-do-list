@@ -10,7 +10,7 @@ const TodoList = ({completedTodos, inCompletedTodos, complete, remove}) => {
       {
         inCompletedTodos.length === 0
         &&
-        <h2 className={styles.placeholder}>Нет задач</h2>
+        <h2 className={styles.placeholder}>Добавь задачу</h2>
       }
 
       {
@@ -24,7 +24,7 @@ const TodoList = ({completedTodos, inCompletedTodos, complete, remove}) => {
       {
         completedTodos.length !== 0
         &&
-        <h2 className={styles.subtitle}>Завершенные</h2>
+        <h2 className={styles.subtitle}>Выполненные задачи</h2>
       }
 
       {
