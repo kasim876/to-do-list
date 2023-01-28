@@ -1,6 +1,18 @@
 @import "src/styles/mixins";
 @import "src/styles/vars";
 
+@keyframes slide-fade-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .root {
   display: flex;
   align-items: center;
@@ -9,6 +21,7 @@
   border-radius: rem(4);
   padding: 1rem;
   width: 100%;
+  animation: slide-fade-down 250ms forwards;
 }
 
 .checkbox {
