@@ -9,6 +9,29 @@
   margin-bottom: 1rem;
 }
 
-.button {
+.addBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateButton {
+  display: flex;
+  align-items: center;
+  padding: 0 rem(12);
+  width: fit-content;
+}
+
+.icon {
+  width: rem(20);
+  height: rem(20);
+  fill: $white;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.addButton {
   max-width: rem(200);
 }
