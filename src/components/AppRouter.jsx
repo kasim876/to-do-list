@@ -2,7 +2,7 @@ import {Routes, Route, Navigate} from 'react-router-dom';
 
 import {HOME_ROUTE} from '@utils/consts';
 
-import {ROUTES} from '@/routes';
+import ROUTES from '@/routes';
 
 const AppRouter = () => {
   return (
