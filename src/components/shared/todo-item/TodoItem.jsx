@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 import {ReactComponent as BinIcon} from '@assets/images/svg/bin.svg';
 
@@ -19,14 +20,11 @@ const TodoItem = ({todo, complete, remove}) => {
       />
       <div className={styles.info}>
         <span
-          className={`${styles.title}${todo.isCompleted ? ` ${styles.titleCross}` : ''}`}
+          className={clsx(styles.title, todo.isCompleted && styles.titleCross)}
         >
           {todo.title}
         </span>
-        {
-
-          todo.date && <small>Срок: {getFullDate(todo.date)}</small>
-        }
+        {todo.date && <small>Срок: {getFullDate(todo.date)}</small>}
       </div>
       <Button className={styles.button} onClick={() => remove(todo)}>
         <BinIcon className={styles.icon}/>

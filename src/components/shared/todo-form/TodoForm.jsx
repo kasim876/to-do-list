@@ -64,9 +64,7 @@ const TodoForm = observer(({create}) => {
           ref={dateButtonNode}
         >
           <CalendarIcon className={styles.icon}/>
-          {
-            calendar.value && <span>{getFullDate(calendar.value)}</span>
-          }
+          {calendar.value && <small>{getFullDate(calendar.value)}</small>}
         </Button>
         <Button
           className={styles.addButton}

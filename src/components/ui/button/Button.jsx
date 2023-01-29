@@ -1,10 +1,11 @@
 import React, {forwardRef} from 'react';
+import clsx from 'clsx';
 
 import styles from './Button.module.scss';
 
 const Button = forwardRef(({children, className, ...props}, ref) => {
   return (
-    <button className={`${styles.root}${className ? ` ${className}` : ''}`} ref={ref} {...props}>
+    <button className={clsx(styles.root, className)} ref={ref} {...props}>
       {children}
     </button>
   );
