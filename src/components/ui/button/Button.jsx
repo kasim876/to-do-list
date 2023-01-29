@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 
 import styles from './Button.module.scss';
 
-const Button = ({children, className, ...props}) => {
+const Button = forwardRef(({children, className, ...props}, ref) => {
   return (
-    <button className={`${styles.root}${className ? ` ${className}` : ''}`} {...props}>
+    <button className={`${styles.root}${className ? ` ${className}` : ''}`} ref={ref} {...props}>
       {children}
     </button>
   );
-};
+});
 
 export default Button;
