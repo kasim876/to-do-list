@@ -53,6 +53,10 @@
   text-decoration: line-through;
 }
 
+.deadlineOver {
+  color: $red;
+}
+
 .button {
   margin-left: auto;
   max-width: rem(50);

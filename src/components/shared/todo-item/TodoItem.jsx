@@ -11,6 +11,16 @@ import getFullDate from '@utils/getFullDate';
 import styles from './TodoItem.module.scss';
 
 const TodoItem = ({todo, complete, remove}) => {
+  const checkDeadline = (date) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today.getTime() + 86400000);
+
+    date = typeof date === 'object' ? date : new Date(date);
+
+    return today.getTime() <= date.getTime();
+  };
+
   return (
     <div className={styles.root}>
       <Checkbox
@@ -24,7 +34,7 @@ const TodoItem = ({todo, complete, remove}) => {
         >
           {todo.title}
         </span>
-        {todo.date && <small>Срок: {getFullDate(todo.date)}</small>}
+        {todo.date && <small className={clsx(!checkDeadline(todo.date) && styles.deadlineOver)}>{checkDeadline(todo.date) ? 'Срок:' : 'Просрочено:'} {getFullDate(todo.date)}</small>}
       </div>
       <Button className={styles.button} onClick={() => remove(todo)}>
         <BinIcon className={styles.icon}/>

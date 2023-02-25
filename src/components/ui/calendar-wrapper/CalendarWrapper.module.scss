@@ -22,7 +22,7 @@
 
 .calendar {
   position: absolute;
+  animation: slide-fade-down 250ms forwards;
   z-index: 9999;
   max-width: rem(250);
-  animation: slide-fade-down 250ms forwards;
 }
